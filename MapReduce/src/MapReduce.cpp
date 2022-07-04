@@ -1,7 +1,6 @@
 #include "MapReduce.h"
 
 #include "Timer.h"
-#include "Utils.h"
 
 #include <thread>
 #include <iostream>

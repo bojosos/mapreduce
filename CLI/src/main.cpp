@@ -115,8 +115,8 @@ int main(int argc, char** argv)
 	}
 
 	// Please explain why I need absolute path
-	// HINSTANCE hProcId = LoadLibrary(fs::absolute(dllPath).c_str());
-	HINSTANCE hProcId = LoadLibrary(L"C:\\dev\\MapReduce\\bin\\Debug-windows-x86_64\\Sandbox\\Sandbox.dll");
+	HINSTANCE hProcId = LoadLibrary(fs::absolute(dllPath).c_str());
+	// HINSTANCE hProcId = LoadLibrary(L"C:\\dev\\MapReduce\\bin\\Debug-windows-x86_64\\Sandbox\\Sandbox.dll");
 	// HINSTANCE hProcId = LoadLibrary(L"C:\\dev\\MapReduce\\bin\\Release-windows-x86_64\\Sandbox\\Sandbox.dll");
 	if (!hProcId)
 	{
@@ -153,13 +153,6 @@ int main(int argc, char** argv)
 		endTask();
 
 	delete mapTask;
-	// TODO:
-	// Chain tasks
-	// Make mapreduce more c++ like
-	// Sort example
-	// Fix merge sort stack overflow
-	// Some docs
-	// Some tests
-	// Make map reduce singleton
+
 	return 0;
 }

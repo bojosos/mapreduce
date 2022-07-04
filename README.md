@@ -2,6 +2,9 @@
 
 Final project for the Parallel Programming course at FMI.
 
+## Instructions
+After downloading run premake\premake5.exe vs2022. Then build the Sandbox project. It will generate a .dll file that can be used as input for CLI. Run the CLI project with -d [path to dll] [files]
+
 There are 3 projects:
 - CLI - command line tool for running map-reduce operations
     - -d [dllPath] specify dll
@@ -20,6 +23,6 @@ By default it will use the value of std::thread::hardware_concurrency for number
 ## Output
 part_[partition number] - output from each partition
 If option mergeFiles is set to true all of the files will be merged into one
+Expected wordcount output with words.txt ["abcdef", "314513", "8484", "tomato", "banana", "51523", "88888"] -  [14463, 14099, 14123, 14385, 14360, 14409, 14161]
 
 ### Slower even on large data sets.
-
